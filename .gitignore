@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+.env
+.venv312/
+# uv
+uv.lock
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Test / cache
+.pytest_cache/
+.mypy_cache/
+
+# Large data files (exceed GitHub's 100MB limit) - keep sample_reviews.csv
+data/Reviews.csv
+data/*.csv
+!data/sample_reviews.csv
