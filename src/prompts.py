@@ -36,7 +36,3 @@ def build_prompt() -> ChatPromptTemplate:
             ("human", USER_TEMPLATE),
         ]
     )
-
-# TODO (Milestone 6): Experiment with the templates above. Try asking the model
-# to include a short count of positive vs negative reviews, and observe how the
-# wording changes grounding quality.

@@ -28,8 +28,3 @@ def total_reviews() -> int:
         with conn.cursor() as cur:
             cur.execute("SELECT COUNT(*) FROM reviews")
             return cur.fetchone()[0]
-
-
-# Practice task (optional):
-# Add a function sentiment_by_product(product_id) that returns sentiment counts
-# filtered to a single ProductId, so users can analyze one product at a time.

@@ -23,9 +23,3 @@ def classify_score(score: int) -> str:
     if score == 3:
         return "Neutral"
     return "Negative"
-
-
-# Practice task (optional enhancement):
-# Write an alternative classifier that uses the review TEXT (not the score)
-# by sending it to the LLM and asking for one word: Positive/Neutral/Negative.
-# Compare its agreement with classify_score() on a sample of reviews.

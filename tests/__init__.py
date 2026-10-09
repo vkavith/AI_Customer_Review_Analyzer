@@ -1,1 +1,1 @@
-"""Tests for the package. Run with: uv run pytest"""
+"""Tests for the package. Run with: python -m pytest"""

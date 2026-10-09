@@ -25,7 +25,7 @@ Built with **LangChain**, **OpenAI**, and **PostgreSQL + pgvector**.
 |-------|------|------|
 | UI | **Streamlit** | Web dashboard |
 | Orchestration | **LangChain** | Connects retrieval → prompt → LLM |
-| LLM | **OpenAI** (`gpt-4o-mini`) | Generates answers (Groq supported as alternative) |
+| LLM | **OpenAI** (`gpt-4o-mini`) | Generates answers |
 | Embeddings | **sentence-transformers** (`all-MiniLM-L6-v2`) | Local, free text→vector |
 | Database | **PostgreSQL + pgvector** | Stores reviews and vector embeddings |
 | Data | **pandas** | Reads/cleans the CSV |
@@ -80,7 +80,7 @@ cp .env.example .env
 # Postgres (schema is selected via the search_path option)
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres?options=-csearch_path=kavitha
 
-# Active LLM provider: "openai" or "groq"
+# LLM provider
 ACTIVE_PROVIDER=openai
 OPENAI_API_KEY=sk-...your_key...
 OPENAI_MODEL=gpt-4o-mini
@@ -156,7 +156,7 @@ src/
   analytics.py        # Sentiment counts for the chart
   retriever.py        # Top-k vector similarity retriever
   prompts.py          # Grounded system + user prompt templates
-  llm_client.py       # OpenAI (active) / Groq chat model
+  llm_client.py       # OpenAI chat model
   rag_chain.py        # Assembles the full RAG chain (LCEL)
 tests/                # pytest tests (ingest, prompts)
 ```

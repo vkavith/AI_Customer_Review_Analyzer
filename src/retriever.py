@@ -17,10 +17,3 @@ def build_retriever() -> VectorStoreRetriever:
     store = get_vector_store()
     # as_retriever wraps the vector store with a standard retrieve interface.
     return store.as_retriever(search_kwargs={"k": cfg.top_k})
-
-
-# Practice task (Milestone 4):
-# Write a short script that builds the retriever and calls
-# retriever.invoke("What do customers complain about?")
-# Print the page_content of each returned document and confirm the results
-# look topically relevant.

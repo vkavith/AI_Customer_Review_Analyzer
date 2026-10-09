@@ -11,8 +11,6 @@ dist/
 venv/
 .env
 .venv312/
-# uv
-uv.lock
 
 # IDE / OS
 .vscode/
@@ -23,7 +21,7 @@ uv.lock
 .pytest_cache/
 .mypy_cache/
 
-# Large data files (exceed GitHub's 100MB limit) - keep sample_reviews.csv
+# Large data files (exceed GitHub's 100MB limit)
 data/Reviews.csv
 data/*.csv
 

@@ -5,7 +5,7 @@ Streamlit UI for the AI Customer Review Analyzer.
 
 Two features:
   1. Sentiment dashboard - classify reviews (Positive/Neutral/Negative) and chart them.
-  2. Ask questions about the reviews using RAG (LangChain + Groq).
+  2. Ask questions about the reviews using RAG (LangChain + OpenAI).
 
 This file should ONLY wire components together - keep DB/LLM logic in src/.
 """
@@ -26,7 +26,7 @@ with st.sidebar:
     st.header("Data")
     st.write(
         "Load the Amazon reviews first, e.g.:\n\n"
-        "`uv run python -m src.ingest data/Reviews.csv --limit 2000`\n\n"
+        "`python -m src.ingest data/Reviews.csv --limit 2000`\n\n"
         "Add `--index` to also build the RAG vector index."
     )
 

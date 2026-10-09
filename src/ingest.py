@@ -8,10 +8,10 @@ index a sample into the vector store for RAG.
 Run from the command line:
     # Insert rows into Postgres (use --limit while developing - the full file
     # has ~568k rows):
-    uv run python -m src.ingest data/Reviews.csv --limit 2000
+    python -m src.ingest data/Reviews.csv --limit 2000
 
     # Also build the vector index for RAG (slower; embeds each review):
-    uv run python -m src.ingest data/Reviews.csv --limit 2000 --index
+    python -m src.ingest data/Reviews.csv --limit 2000 --index
 """
 
 import argparse
