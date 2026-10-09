@@ -26,4 +26,4 @@ uv.lock
 # Large data files (exceed GitHub's 100MB limit) - keep sample_reviews.csv
 data/Reviews.csv
 data/*.csv
-!data/sample_reviews.csv
+

@@ -40,8 +40,8 @@ Built with **LangChain**, **OpenAI**, and **PostgreSQL + pgvector**.
 (~568k reviews of food/grocery products). Place the file at `data/Reviews.csv`.
 
 > **Note:** `data/Reviews.csv` (~287 MB) is **not** committed to git (it exceeds
-> GitHub's 100 MB limit). Download it separately. A tiny `data/sample_reviews.csv`
-> is included for quick testing.
+> GitHub's 100 MB limit). Download it separately from the link above and place it
+> at `data/Reviews.csv` before loading data.
 
 **Sentiment mapping:** Score 4–5 → Positive · Score 3 → Neutral · Score 1–2 → Negative.
 
@@ -146,7 +146,7 @@ app.py                # Streamlit UI (sentiment chart + RAG Q&A)
 requirements.txt      # Dependencies
 sql/schema.sql        # Creates kavitha schema + reviews table + indexes
 data/
-  sample_reviews.csv  # Small sample (Reviews.csv is gitignored)
+  Reviews.csv         # Amazon dataset (gitignored - download separately)
 src/
   config.py           # Loads env vars, selects active LLM provider
   db.py               # Postgres connection + pgvector store (schema-aware)
